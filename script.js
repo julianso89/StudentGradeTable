@@ -134,12 +134,12 @@ function updateStudentList(studentArray){
  */
 
 function calculateGradeAverage(studentArray){
-    var pointAverage = 0;
-    for( var i = 0; i< studentArray.length; i++){
-        pointAverage = pointAverage + parseInt(studentArray[i].grade);
+    var gradeAverage = 0;
+    for( var i = 0; i < studentArray.length; i++){
+        gradeAverage = gradeAverage + parseInt(studentArray[i].grade);
     }
-    pointAverage = (pointAverage / studentArray.length).toFixed(2);
-    return pointAverage;
+    gradeAverage = (gradeAverage / studentArray.length).toFixed(2);
+    return gradeAverage;
 }
 /***************************************************************************************************
  * renderGradeAverage - updates the on-page grade average
@@ -147,9 +147,8 @@ function calculateGradeAverage(studentArray){
  * @returns {undefined} none
  */
 
-
 function renderGradeAverage(gradeAverage){
-    $('label-default').text(gradeAverage);
+    $('.label.label-default').text(gradeAverage);
 }
 
 
